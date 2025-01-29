@@ -12,7 +12,6 @@
 
 .navbar {
   background: $primary_color;
-  min-width: 500px;
   height: 80%;
   border: $borders;
   display: flex;
@@ -47,8 +46,7 @@
 .banniere {
   display: flex;
   justify-self: center;
-  margin-top: 40px;
-  margin-left: 50px;
+  margin: 15px 0 0 0;
   border-radius: 15px;
   width: 90%;
   
@@ -74,8 +72,7 @@
 
 .annonce {
   display: block;
-  margin-top: 40px;
-  margin-left: 100px;
+  margin: 0 0 0 50px ;
   letter-spacing: 0.2rem;
   font-family: "Roboto", serif;
   font-size: 2rem;
@@ -90,7 +87,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 80px;
+  margin: auto;
   width: 90%;
 }
 
@@ -241,8 +238,11 @@
     align-items: center;
 
     .card-content {
-      width: 90%;
-      margin-right: 10px;
+      width: 100%;
+      p {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
   .annonce {
@@ -348,7 +348,7 @@
   }
 }
 
-@media screen and (max-width: 500px ) {
+@media screen and (max-width: 520px ) {
   .navbar {
     flex-direction: column;
     align-items: start;
@@ -357,7 +357,63 @@
     font-size: 1rem;
     font-size: 0.9rem;
     font-weight: bold;
+  }
 
+  .footer {
+    h4 {
+      font-size: 1rem;
+      padding: 5px;
+    }
+  }
+  .copyright {
+    font-size: 1rem;
   }
   
+}
+
+@media screen and (max-width: 430px) {
+
+  .navbar {
+    ul {
+      li {
+        font-size: 0.6rem;
+      }
+    }
+  }
+  .banniere {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 250px;
+    height: 210px;
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      text-align: start;
+      margin: 0;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+
+  .card {
+    max-width: 250px;
+  }
+  .card-content img {
+    width: 100%;
+  }
+  .footer {
+    h3 {
+      font-size: 0.1rem;
+      font-weight: normal;
+    }
+    ul {
+      li {
+        font-size: 0.5rem;
+      }
+    }
+  }
 }
