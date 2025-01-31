@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SASS</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="navbar">
@@ -17,7 +18,32 @@
             <li>Boutique</li>
             <li>RM Play</li>
         </ul>
+        <div class="connect">
+            <a href="#" class="btn-a">S'inscrire</a>
+            <a href="#" class="btn-b">Se connecter</a>
+        </div>
+        <div class="nav-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </div>
+    
+    <div class="nav-menu-resize">
+        <div class="navbar-resize ">
+            <ul>
+                <li>Madridistas</li>
+                <li>Billeterie</li>
+                <li>Zone VIP</li>
+                <li>Tour</li>
+                <li>Boutique</li>
+                <li>RM Play</li>
+                <div class="diveder"></div>
+            <div class="connect">
+                <a href="#" class="btn-a">S'inscrire</a>
+                <a href="#" class="btn-b">Se connecter</a>
+            </div>
+            </ul>
+    </div>
+    
     <div class="banniere">
         <img src="../img/preparation du match.png" alt="image d'entrainement">
         <span>Le Real Madrid prépare le match contre Brest</span>
@@ -118,5 +144,18 @@
     </div>
     
     <span class="copyright">Real Madrid © 2025 Tous droits réservés</span>
+
+    <script>
+         const menuButton = document.querySelector('.nav-menu')
+         const menuButtonIcon = document.querySelector('.nav-menu i')
+         const menu = document.querySelector('.navbar-resize') 
+         menuButton.onclick = function () {
+            menu.classList.toggle('open') 
+            const isOpen = menu.classList.contains('open')
+            menuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+         }
+
+
+    </script>
 </body>
 </html>
